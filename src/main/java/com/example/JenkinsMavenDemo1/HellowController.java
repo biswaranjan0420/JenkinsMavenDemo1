@@ -36,6 +36,7 @@ public class HellowController {
 		map.put("name", "Biswaranjan");
 		map.put("age", "36");
 		map.put("gender", "M");
+		map.put("Hi", "Hellow");
 		return map;
 	}
 }
