@@ -27,6 +27,7 @@ public class HellowController {
 	private Map<String, String> readMapData() {
 		Map<String, String> map = new HashMap<>();
 		map.put("name", "Biswaranjan");
+		map.put("age", "30");
 		return map;
 	}
 }
