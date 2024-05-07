@@ -1,6 +1,5 @@
 package com.example.JenkinsMavenDemo1;
 
-import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,12 +25,6 @@ public class HellowController {
 	}
 
 	private Map<String, String> readMapData() {
-		try {
-			FileInputStream fis = new FileInputStream("/abcs.txt");
-			fis.available();
-		} catch (Exception e) {
-
-		}
 		Map<String, String> map = new HashMap<>();
 		map.put("name", "Biswaranjan");
 		map.put("age", "36");
