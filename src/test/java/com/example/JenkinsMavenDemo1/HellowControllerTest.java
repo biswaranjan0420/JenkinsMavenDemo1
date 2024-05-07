@@ -1,6 +1,7 @@
 package com.example.JenkinsMavenDemo1;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.Map;
@@ -19,7 +20,7 @@ public class HellowControllerTest {
 	}
 	
 	@Test
-	public void test1(){
+	 void test1(){
 		ResponseEntity<Map<String, String>> data = hellowController.test();
 		Map<String, String> actualdata = data.getBody();
 		assertNotNull(actualdata);
@@ -27,4 +28,13 @@ public class HellowControllerTest {
 		assertEquals("36", actualdata.get("age"));
 	}
 
+	
+	@Test
+	 void test2(){
+		ResponseEntity<Map<String, String>> data = hellowController.test();
+		Map<String, String> actualdata = data.getBody();
+		assertNotNull(actualdata);
+		assertNotEquals("36", actualdata.get("age"));
+		assertEquals("38", actualdata.get("age"));
+	}
 }
