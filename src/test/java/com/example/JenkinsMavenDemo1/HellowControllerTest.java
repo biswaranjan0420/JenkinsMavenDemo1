@@ -33,7 +33,6 @@ public class HellowControllerTest {
 	 void test2(){
 		ResponseEntity<Map<String, String>> data = hellowController.test();
 		Map<String, String> actualdata = data.getBody();
-		assertNotNull(actualdata);
 		assertNotEquals("36", actualdata.get("age"));
 		assertEquals("38", actualdata.get("age"));
 	}
